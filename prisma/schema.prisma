@@ -21,8 +21,8 @@ model Org {
   neighborhood String
   street       String
 
-  latitude  String
-  longitude String
+  latitude  Decimal
+  longitude Decimal
 
   pets Pet[]
 
