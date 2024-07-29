@@ -10,6 +10,16 @@ export class InMemoryPetRepository implements PetRepository {
 
   constructor(private orgsRepository: InMemoryOrgRepository) { }
 
+  async findById(id: string) {
+    const pet = this.items.find((item) => item.id === id)
+
+    if (!pet) {
+      return null
+    }
+    
+    return pet
+  }
+
   async findAll(params: FindAllParams) {
     const orgsByCity = this.orgsRepository.items.filter(
       (org) => org.city === params.city
