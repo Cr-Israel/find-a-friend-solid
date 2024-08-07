@@ -13,7 +13,7 @@ describe('Create Pet', () => {
   beforeEach(() => {
     orgRepository = new InMemoryOrgRepository()
     petRepository = new InMemoryPetRepository(orgRepository)
-    sut = new CreatePetUseCase(orgRepository, petRepository)
+    sut = new CreatePetUseCase(petRepository, orgRepository)
   })
 
   it('should not be able to create a pet with not existing org', async () => {
