@@ -3,7 +3,7 @@ import crypto from "node:crypto"
 import { Org, Prisma } from "@prisma/client";
 import { Decimal } from "@prisma/client/runtime/library";
 
-import { FindManyNearbyParams, OrgRepository } from "../org-repository";
+import { FindManyNearbyParams, OrgRepository } from "../orgs-repository";
 import { getDistanceBetweenCoordinates } from "@/utils/get-distance-between-coordinates";
 
 export class InMemoryOrgRepository implements OrgRepository {
