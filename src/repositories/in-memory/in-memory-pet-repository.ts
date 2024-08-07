@@ -2,7 +2,7 @@ import crypto from "node:crypto"
 
 import { Pet, Prisma } from "@prisma/client";
 
-import { FindAllParams, PetRepository } from "../pet-repository";
+import { FindAllParams, PetRepository } from "../pets-repository";
 import { InMemoryOrgRepository } from "./in-memory-org-repository";
 
 export class InMemoryPetRepository implements PetRepository {
