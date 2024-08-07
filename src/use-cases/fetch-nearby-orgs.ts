@@ -1,23 +1,23 @@
 import { Org } from "@prisma/client"
 
-import { OrgRepository } from "@/repositories/org-repository"
+import { OrgRepository } from "@/repositories/orgs-repository"
 
-interface FetchNearbyGymsUseCaseRequest {
+interface FetchNearbyOrgsUseCaseRequest {
   userLatitude: number
   userLongitude: number
 }
 
-interface FetchNearbyGymsUseCaseResponse {
+interface FetchNearbyOrgsUseCaseResponse {
   orgs: Org[]
 }
 
-export class FetchNearbyGymsUseCase {
+export class FetchNearbyOrgsUseCase {
   constructor(private orgRepository: OrgRepository) { }
 
   async execute({
     userLatitude,
     userLongitude
-  }: FetchNearbyGymsUseCaseRequest): Promise<FetchNearbyGymsUseCaseResponse> {
+  }: FetchNearbyOrgsUseCaseRequest): Promise<FetchNearbyOrgsUseCaseResponse> {
     const orgs = await this.orgRepository.findManyNearby({
       latitude: userLatitude,
       longitude: userLongitude

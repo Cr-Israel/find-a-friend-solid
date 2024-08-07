@@ -1,6 +1,6 @@
 import { Pet } from "@prisma/client"
 
-import { PetRepository } from "@/repositories/pet-repository"
+import { PetRepository } from "@/repositories/pets-repository"
 
 interface SearchPetsUseCaseRequest {
   city: string

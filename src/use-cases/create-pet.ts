@@ -1,7 +1,7 @@
 import { Pet } from "@prisma/client"
 
-import { OrgRepository } from "@/repositories/org-repository"
-import { PetRepository } from "@/repositories/pet-repository"
+import { OrgRepository } from "@/repositories/orgs-repository"
+import { PetRepository } from "@/repositories/pets-repository"
 import { OrgNotFoundError } from "./errors/org-not-found-error"
 
 interface CreatePetUseCaseRequest {
@@ -20,8 +20,8 @@ interface CreatePetUseCaseResponse {
 
 export class CreatePetUseCase {
   constructor(
-    private orgRepository: OrgRepository,
-    private petRepository: PetRepository
+    private petRepository: PetRepository,
+    private orgRepository: OrgRepository
   ) { }
 
   async execute({
