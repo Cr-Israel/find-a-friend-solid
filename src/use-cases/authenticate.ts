@@ -1,7 +1,7 @@
 import { Org } from "@prisma/client"
 import { compare } from "bcryptjs"
 
-import { OrgRepository } from "@/repositories/org-repository"
+import { OrgRepository } from "@/repositories/orgs-repository"
 import { InvalidCredentialsError } from "./errors/invalid-credentials-error"
 
 interface AuthenticateOrgUseCaseRequest {
