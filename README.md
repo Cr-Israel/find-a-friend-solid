@@ -58,7 +58,7 @@ A APi foi construída seguindo os princípios do SOLID, padrão Factory, Reposit
 
 | Parâmetro   | Tipo       | Descrição                           |
 | :---------- | :--------- | :---------------------------------- |
-|  | :---------- | **Obrigatório**. Informações necessárias para cadastrar uma organização. |
+|  |     | **Obrigatório**. Informações necessárias para cadastrar uma organização. |
 
 #### Autenticação de Organização
 
